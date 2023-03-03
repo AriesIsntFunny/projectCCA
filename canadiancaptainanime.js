@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const keepAlive = require("./server");
+require('dotenv').config()
 
 const CanadianCaptainAnime = new Discord.Client();
 
@@ -117,4 +118,5 @@ CanadianCaptainAnime.on('message', message =>{
 });
 
 keepAlive();
-CanadianCaptainAnime.login(process.env.TOKEN);
+console.log(process.env.DUMB_TOKEN)
+CanadianCaptainAnime.login(process.env.DUMB_TOKEN);
