@@ -120,7 +120,7 @@ CanadianCaptainAnime.on('message', message =>{
 });
 
 keepAlive();
-console.log(process.env.DUMB_TOKEN)
+// console.log(process.env.DUMB_TOKEN)
 
 // CanadianCaptainAnime.on('ready', () =>{
 //     console.log('FINALLYYYYYY')
