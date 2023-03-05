@@ -1,8 +1,10 @@
-const Discord = require('discord.js');
+const {Client, GatewayIntentBits} = require('discord.js');
 const keepAlive = require("./server");
 require('dotenv').config({path: './client.env'})
 
-const CanadianCaptainAnime = new Discord.Client();
+const CanadianCaptainAnime = new Client({ intents: [
+    GatewayIntentBits.Guilds
+] });
 
 const prefix = '!c ';
 
@@ -119,4 +121,9 @@ CanadianCaptainAnime.on('message', message =>{
 
 keepAlive();
 console.log(process.env.DUMB_TOKEN)
+
+// CanadianCaptainAnime.on('ready', () =>{
+//     console.log('FINALLYYYYYY')
+//     });
+
 CanadianCaptainAnime.login(process.env.DUMB_TOKEN);
