@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const keepAlive = require("./server");
-require('dotenv').config()
+require('dotenv').config({path: './client.env'})
 
 const CanadianCaptainAnime = new Discord.Client();
 
