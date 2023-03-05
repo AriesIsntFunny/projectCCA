@@ -1,0 +1,5 @@
+steps:
+  - name: Adding the bot token ig
+    env:
+      GITHUB_TOKEN: ${{ secrets.DUMBTOKEN }}
+    varr: ${{ "ex" }}

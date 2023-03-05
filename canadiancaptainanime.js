@@ -1,5 +1,10 @@
 const {Client, GatewayIntentBits} = require('discord.js');
 const keepAlive = require("./server");
+const yaml = require('js-yaml');
+const fs = require("fs");
+
+let yamlFile = fs.readFileSync("./pls.yaml", "utf8");
+let loadedYaml = yaml.load(yamlFile);
 require('dotenv').config({path: './client.env'})
 
 const CanadianCaptainAnime = new Client({ intents: [
@@ -120,10 +125,13 @@ CanadianCaptainAnime.on('message', message =>{
 });
 
 keepAlive();
+
 // console.log(process.env.DUMB_TOKEN)
+// console.log(loadedYaml.steps[0].env.GITHUB_TOKEN);
 
 // CanadianCaptainAnime.on('ready', () =>{
 //     console.log('FINALLYYYYYY')
 //     });
 
 CanadianCaptainAnime.login(process.env.DUMB_TOKEN);
+// CanadianCaptainAnime.login(loadedYaml.steps[0].env.GITHUB_TOKEN);
